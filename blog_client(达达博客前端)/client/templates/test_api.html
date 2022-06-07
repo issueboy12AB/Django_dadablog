@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<!--
+author:guojunyu
+desc:this demo is about blog.
+-->
+<head>
+  <script src="/static/js/jquery.min.js" type="text/javascript"></script>
+</head>
+<body id='show'>
+</body>
+
+<script>
+		$(function(){
+		
+			$.ajax({
+			"type":"get",
+			"url": "http://127.0.0.1:8000/test_cors",
+			"dataType": "json",
+			"success":function(res){
+			    $('#show').html(res.msg);
+			  }
+			})
+		})
+</script>
